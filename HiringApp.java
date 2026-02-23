@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class HiringApp {
 
-    public static void main(String[] args) {
+    static Scanner input = new Scanner(System.in); // scanner to read user input and its static inside the class so it can be reached anywhere in the file
+    public static int choice = 0;
 
-        Scanner input = new Scanner(System.in); // input
-        int choice = getChoice(input);
+    public static void main(String[] args) {
 
         // Define the data structures for 3 different groups of people:
         // new applicants
@@ -29,14 +29,15 @@ public class HiringApp {
 
     // other methods for code modularization
     // method for getting user choice
-    public static int getChoice(Scanner sc) { // maybe done ------------------------- user choice in main
+    public static int getChoice() { // maybe done ------------------------- user choice in main
 
         // display the menu
         System.out.println("Action (1 to accept, 2 to hire, 3 to fire): ");
         // get user choice
+        String strChoice = input.nextLine();
+        choice = Integer.parseInt(strChoice);
         // return user choice as an integer
-        return sc.nextInt();
-
+        return choice;
     }
 
     // method for accepting an applicant and reurn this applicant as a Person object
