@@ -1,10 +1,11 @@
 //Assign 4, HiringApp
 package assign4_template;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HiringApp {
-
+    
     static Scanner input = new Scanner(System.in); // scanner to read user input and its static inside the class so it can be reached anywhere in the file
     public static int choice = 0;
 
@@ -40,22 +41,35 @@ public class HiringApp {
         return choice;
     }
 
-    // method for accepting an applicant and reurn this applicant as a Person object
+    // method for accepting an applicant and return this applicant as a Person object
     public static Person getApplication() {
+        
         // display prompt for user to enter an applicant's name
         // get user input
-
+        System.out.println("Enter the name of Applicant: ");
+        String newName = input.nextLine();
         // display prompt for user to enter an applicant's degree
         // get user input
-
+        System.out.println("Enter the degree of applicant: ");
+        String newDegree = input.nextLine();
         // display prompt for user to enter an applicant's skill list
         // (first how many skills, then enter skill one by one)
         // use a loop to get each skill
-
+        System.out.println("Enter how many skills applicant have: ");
+        int numOfSkills = Integer.parseInt(input.nextLine()); // takes the whole line and castes to int, then no need to skip the remaining empty line 
+        ArrayList<String> newSkills = new ArrayList<>();
+        String skill;
+        for (int i = 0; i < numOfSkills; i++) {
+            System.out.println("enter skill " + i + ": ");
+            skill = input.nextLine();
+            newSkills.add(skill);
+        }
         // create a Person object using the name, degree, skill list
         // and return this Person object
+        Person newPerson = new Person(newName, newDegree, newSkills);
 
-        return null;
+
+        return newPerson;
     }
 
     // You can either implement hire and fire functionalities in main(...),
