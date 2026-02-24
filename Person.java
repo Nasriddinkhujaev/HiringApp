@@ -1,4 +1,16 @@
 //Assign 4, Peron class.
+/*
+ * CIS2168 Data Structures
+ * Section: 002
+ * Name: Mukhammad Nasriddinkhujaev
+ * Email: tut11887@temple.edu
+ * Assignment: Assign 4
+ * Program Name: Person.java
+ * Program Description: Represents an applicant or employee (current or past).
+ * Stores name, degree, and a list of skills. Includes constructor, getters, setters, 
+ * and toString() method.
+ */
+
 //  Represent an applicant, or an employee
 
 package assign4_template;
@@ -38,7 +50,7 @@ public class Person { // new applicants, current employees, past employees
 
     // define setters
     public void setName(String newName) {
-        if (name != null && !newName.isEmpty()) {
+        if (newName != null && !newName.isEmpty()) {
             name = newName;
         }
     }
@@ -59,5 +71,3 @@ public class Person { // new applicants, current employees, past employees
     }
 
 }
-
-// check for git

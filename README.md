@@ -1,32 +1,31 @@
-This repo has two java files. first one is person class that initializes person and list of person is used inside second file hiring class which takes action based on user input and person's info. based on the list the best candidate is hired, least senior worker fired, or accept 
-When the program runs it looks like this 
+CIS2168 Data Structures
 
+Section: 002
+Student Name: Mukhammad Nasriddinkhujaev
+Email: tut11887@temple.edu
+Assignment: Assign 4
+Program Name: HiringApp
 
-Sample Output:
+Description
 
+This program simulates a hiring and firing system for a company.
+	•	Applicants are stored in a Queue (FIFO).
+	•	Current employees are stored in a Stack (LIFO).
+	•	Past employees (fired employees) are stored in a Stack (LIFO).
 
-Note: --> means the user hits Return key on the keyboard.
+Hiring Rules:
+	•	Rehire the most recently fired employee first.
+	•	If no fired employees exist, hire the earliest applicant.
+	•	If no one is available, print a memo message.
 
-Action (1 to accept, 2 to hire, 3 to fire): 3 -->
-Memo to supervisor: There is nobody to fire
-Action (1 to accept, 2 to hire, 3 to fire): 1 -->
-Enter the applicant’s name, degree: Fred Bachelor -->
-Enter the number of skills and the skill list: 1 Java -->
-Action (1 to accept, 2 to hire, 3 to fire): 1 -->
-Enter the applicant’s name, degree: Barney Bachelor -->
-Enter the number of skills and the skill list: 2 Java C++ -->
-Action (1 to accept, 2 to hire, 3 to fire): 1 -->
-Enter the applicant’s name, degree: Bambam Master -->
-Enter the number of skills and the skill list: 3 Java C# Python -->
-Action (1 to accept, 2 to hire, 3 to fire): 2 -->
-Fred hired 
-Action (1 to accept, 2 to hire, 3 to fire): 2 -->
-Barney hired 
-Action (1 to accept, 2 to hire, 3 to fire): 3 -->
-Barney fired
-Action (1 to accept, 2 to hire, 3 to fire): 2 -->
-Barney hired
-Action (1 to accept, 2 to hire, 3 to fire): 2 -->
-Bambam hired
-Action (1 to accept, 2 to hire, 3 to fire): 2 -->
-Memo to Supervisor: There is nobody to hire
+Firing Rules:
+	•	Fire the most recently hired employee.
+	•	If there are no employees, print a memo message.
+
+Files Included
+	•	Person.java
+	•	HiringApp.java
+	•	README.txt
+
+IDE Used
+  • Visual Studio Code
